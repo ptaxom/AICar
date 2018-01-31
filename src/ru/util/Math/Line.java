@@ -52,4 +52,15 @@ public class Line {
     public void setC(double c) {
         C = c;
     }
+
+
+    public boolean Belongs(Point point){
+        double dx = Math.abs(point.getX()-a.getX())+Math.abs(point.getX()-b.getX());
+        double dy = Math.abs(point.getY()-a.getY())+Math.abs(point.getY()-b.getY());
+        double lx = Math.abs(a.getX()-b.getX());
+        double ly = Math.abs(a.getY()-b.getY());
+        return (Math.abs(dx-lx) <= 0.01 && Math.abs(dy-ly) <= 0.01);
+    }
+
+
 }

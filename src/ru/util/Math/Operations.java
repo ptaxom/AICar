@@ -40,4 +40,11 @@ public class Operations {
     }
 
 
+    public static Vector Rotate(Vector a, double angle){
+        double x = a.getX()*Math.cos(angle) - a.getY()*Math.sin(-angle);
+        double y = a.getX()*Math.sin(-angle) + a.getY()*Math.cos(angle);
+        return new Vector(x, y);
+    }
+
+
 }
